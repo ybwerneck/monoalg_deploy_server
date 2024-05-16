@@ -1,0 +1,6 @@
+Command line to reproduce this simulation:
+bin/MonoAlg3D -c AjusteSigma//output_run_1_sigma_C_1.2_sigma_factor_0.0125,0.02/restore4580/protocolo.ini 
+For reproducibility purposes the configuration file was copied to file: AjusteSigma//output_run_1_sigma_C_1.2_sigma_factor_0.0125,0.02/restore4580//original_configuration.ini
+======================================================================
+No configuration provided to make simulation checkpoints! Chekpoints will not be created!
+======================================================================

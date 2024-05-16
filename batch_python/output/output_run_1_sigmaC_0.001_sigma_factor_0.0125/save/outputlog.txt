@@ -1,0 +1,224 @@
+Command line to reproduce this simulation:
+bin/MonoAlg3D -c batch_python/output/output_run_1_sigmaC_0.001_sigma_factor_0.0125/saveprotocolo.ini 
+For reproducibility purposes the configuration file was copied to file: batch_python/output/output_run_1_sigmaC_0.001_sigma_factor_0.0125/save/original_configuration.ini
+======================================================================
+======================================================================
+1 devices available, running both ODE and linear system solvers on GPU (device 0 -> NVIDIA GeForce RTX 4070)
+Loading HU Heart Mesh with discretization: 200.000000
+Start - reading mesh file
+Finish - reading mesh file
+
+Start - refining the initial cube (refining 9 times with a cube side of 204800.000000)
+Refined 1 of 9 (22 cells)
+Refined 2 of 9 (50 cells)
+Refined 3 of 9 (113 cells)
+Refined 4 of 9 (225 cells)
+Refined 5 of 9 (561 cells)
+Refined 6 of 9 (1716 cells)
+Refined 7 of 9 (6182 cells)
+Refined 8 of 9 (23640 cells)
+Refined 9 of 9 (90672 cells)
+Finish - refining the initial cube
+
+Loading grid with cube side of 204800.000000
+Cleaning grid
+
+Time to load the mesh: 72217 μs
+
+Read 23194 volumes from file (expected 23194): meshes/paciente7_fatia5_f1.alg
+-----------------------------------xxxxxxx
+num_active_cells na SET_EXTRA_DATA = 23194 
+Setting ODE's initial conditions
+Using ten Tusscher 3 (null) GPU model
+======================================================================
+System parameters: 
+======================================================================
+[main] Using OpenMP with 6 threads
+[monodomain_solver] Beta = 0.1400000000, Cm = 1.0000000000
+[monodomain_solver] PDE time step = 0.0200000000
+[monodomain_solver] ODE min time step = 0.0200000000
+[monodomain_solver] Simulation Final Time = 2900.000000
+======================================================================
+[ode_solver] Using GPU to solve ODEs
+[ode_solver] Using shared_libs/libtt3_mixed_with_activations_times.so as model lib
+[ode_solver] Initial V: -86.199997
+[ode_solver] Number of ODEs in cell model: 15
+======================================================================
+[grid] Initial N. of Elements = 23194
+======================================================================
+[save_state] configuration:
+[save_state] library = ./shared_libs/libdefault_save_state.so
+[save_state] main function = save_simulation_state_with_activation_times
+[save_state] output_dir = batch_python/output/output_run_1_sigmaC_0.001_sigma_factor_0.0125/save
+======================================================================
+[linear_system_solver] configuration:
+[linear_system_solver] library = shared_libs/libdefault_linear_system_solver.so
+[linear_system_solver] main function = conjugate_gradient
+[linear_system_solver] init function = init_conjugate_gradient
+[linear_system_solver] end function = end_conjugate_gradient
+[linear_system_solver] tolerance = 1e-9
+[linear_system_solver] use_preconditioner = no
+[linear_system_solver] use_gpu = yes
+[linear_system_solver] max_iterations = 200
+======================================================================
+[save_mesh] configuration:
+[save_mesh] library = ./shared_libs/libdefault_save_mesh.so
+[save_mesh] main function = save_with_num_activation_times
+[save_mesh] init function = init_save_with_activation_times
+[save_mesh] end function = end_save_with_activation_times
+[save_mesh] print_rate = 100
+[save_mesh] output_dir = batch_python/output/output_run_1_sigmaC_0.001_sigma_factor_0.0125/save
+[save_mesh] binary = true
+[save_mesh] mesh_format = ensight
+[save_mesh] mesh_print_rate = 100
+[save_mesh] file_prefix = V
+======================================================================
+Stimulus name: stim_1_1
+[stim] configuration:
+[stim] library = ./shared_libs/libdefault_stimuli.so
+[stim] main function = stim_x_y_z_limits
+[stim] start = 0
+[stim] duration = 2.0
+[stim] current = -38.0
+[stim] min_x = 68300.0
+[stim] max_x = 70300.0
+[stim] min_y = 115700.0
+[stim] max_y = 117700.0
+[stim] min_z = 100.0
+[stim] max_z = 100.0
+======================================================================
+Stimulus name: stim_1_2
+[stim] configuration:
+[stim] library = ./shared_libs/libdefault_stimuli.so
+[stim] main function = stim_x_y_z_limits
+[stim] start = 400
+[stim] duration = 2.0
+[stim] current = -38.0
+[stim] min_x = 68300.0
+[stim] max_x = 70300.0
+[stim] min_y = 115700.0
+[stim] max_y = 117700.0
+[stim] min_z = 100.0
+[stim] max_z = 100.0
+======================================================================
+Stimulus name: stim_1_3
+[stim] configuration:
+[stim] library = ./shared_libs/libdefault_stimuli.so
+[stim] main function = stim_x_y_z_limits
+[stim] start = 800
+[stim] duration = 2.0
+[stim] current = -38.0
+[stim] min_x = 68300.0
+[stim] max_x = 70300.0
+[stim] min_y = 115700.0
+[stim] max_y = 117700.0
+[stim] min_z = 100.0
+[stim] max_z = 100.0
+======================================================================
+Stimulus name: stim_1_4
+[stim] configuration:
+[stim] library = ./shared_libs/libdefault_stimuli.so
+[stim] main function = stim_x_y_z_limits
+[stim] start = 1200
+[stim] duration = 2.0
+[stim] current = -38.0
+[stim] min_x = 68300.0
+[stim] max_x = 70300.0
+[stim] min_y = 115700.0
+[stim] max_y = 117700.0
+[stim] min_z = 100.0
+[stim] max_z = 100.0
+======================================================================
+Stimulus name: stim_1_5
+[stim] configuration:
+[stim] library = ./shared_libs/libdefault_stimuli.so
+[stim] main function = stim_x_y_z_limits
+[stim] start = 1600
+[stim] duration = 2.0
+[stim] current = -38.0
+[stim] min_x = 68300.0
+[stim] max_x = 70300.0
+[stim] min_y = 115700.0
+[stim] max_y = 117700.0
+[stim] min_z = 100.0
+[stim] max_z = 100.0
+======================================================================
+Stimulus name: stim_1_6
+[stim] configuration:
+[stim] library = ./shared_libs/libdefault_stimuli.so
+[stim] main function = stim_x_y_z_limits
+[stim] start = 2000
+[stim] duration = 2.0
+[stim] current = -38.0
+[stim] min_x = 68300.0
+[stim] max_x = 70300.0
+[stim] min_y = 115700.0
+[stim] max_y = 117700.0
+[stim] min_z = 100.0
+[stim] max_z = 100.0
+======================================================================
+Stimulus name: stim_1_7
+[stim] configuration:
+[stim] library = ./shared_libs/libdefault_stimuli.so
+[stim] main function = stim_x_y_z_limits
+[stim] start = 2400
+[stim] duration = 2.0
+[stim] current = -38.0
+[stim] min_x = 68300.0
+[stim] max_x = 70300.0
+[stim] min_y = 115700.0
+[stim] max_y = 117700.0
+[stim] min_z = 100.0
+[stim] max_z = 100.0
+======================================================================
+Stimulus name: stim_1_8
+[stim] configuration:
+[stim] library = ./shared_libs/libdefault_stimuli.so
+[stim] main function = stim_x_y_z_limits
+[stim] start = 2800
+[stim] duration = 2.0
+[stim] current = -38.0
+[stim] min_x = 68300.0
+[stim] max_x = 70300.0
+[stim] min_y = 115700.0
+[stim] max_y = 117700.0
+[stim] min_z = 100.0
+[stim] max_z = 100.0
+======================================================================
+[domain] configuration:
+[domain] library = ./shared_libs/libdefault_domains.so
+[domain] main function = initialize_grid_with_hu_mesh_with_scar
+[domain] name = HU Mesh 3D
+[domain] original_discretization = 200.0
+[domain] desired_discretization = 200.0
+[domain] num_volumes = 23194
+[domain] mesh_file = meshes/paciente7_fatia5_f1.alg
+[domain] num_extra_fields = 5
+[domain] start_dx = 200.000000
+[domain] start_dy = 200.000000
+[domain] start_dz = 200.000000
+======================================================================
+[extra_data] configuration:
+[extra_data] library = shared_libs/libdefault_extra_data.so
+[extra_data] main function = set_extra_data_for_scv_mesh
+======================================================================
+[update_monodomain] configuration:
+[update_monodomain] library = ./shared_libs/libdefault_update_monodomain.so
+[update_monodomain] main function = update_monodomain_default
+======================================================================
+[assembly_matrix] configuration:
+[assembly_matrix] library = shared_libs/libdefault_matrix_assembly.so
+[assembly_matrix] main function = anisotropic_sigma_assembly_matrix_for_hu_mesh
+[assembly_matrix] init function = set_initial_conditions_fvm
+[assembly_matrix] sigma_C = 1.0
+[assembly_matrix] sigma_factor = 0.0125
+[assembly_matrix] sigma_l = 0.001
+[assembly_matrix] sigma_t = 0.001
+[assembly_matrix] sigma_n = 0.001
+[assembly_matrix] fibers_in_mesh = true
+======================================================================
+Solving EDO 1 times before solving PDE
+Starting simulation
+[ERR] 
+Simulation stopped due to NaN on time 0.000000. This is probably a problem with the cellular model solver.
+.

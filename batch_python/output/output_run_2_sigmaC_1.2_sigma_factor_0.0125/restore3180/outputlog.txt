@@ -1,0 +1,6 @@
+Command line to reproduce this simulation:
+bin/MonoAlg3D -c batch_python/output/output_run_2_sigmaC_1.2_sigma_factor_0.0125/restore3180/protocolo.ini 
+For reproducibility purposes the configuration file was copied to file: batch_python/output/output_run_2_sigmaC_1.2_sigma_factor_0.0125/restore3180//original_configuration.ini
+======================================================================
+No configuration provided to make simulation checkpoints! Chekpoints will not be created!
+======================================================================
